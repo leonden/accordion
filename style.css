@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(233, 255, 255);
+  font-family: sans-serif;
+}
+
+.accordion {
+  max-width: 800px;
+}
+
+.accordion .content-box {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.accordion .content-box .label {
+  position: relative;
+  padding: 10px;
+  background: teal;
+  color: white;
+  cursor: pointer;
+}
+
+.accordion .content-box .content {
+  position: relative;
+  background: white;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: auto;
+}
+
+.accordion .content-box.active .content {
+  height: 150px;
+}
